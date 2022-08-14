@@ -1,0 +1,16 @@
+.slick-prev,.slick-next{
+    position: none !important;
+    display: none !important;
+}
+/* .slick-dots li button{
+    height: 100px !important;
+} */
+.banner-1{
+    background-image: url('https://i.ibb.co/5MNytyp/2-2-620x257.webp');
+}
+.banner-2{
+    background-image: url('https://i.ibb.co/vZw6dK7/slider-1.webp');
+}
+.banner-3{
+    background-image: url('https://i.ibb.co/DLmJsM1/slider-2.webp');
+}
