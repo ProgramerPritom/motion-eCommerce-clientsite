@@ -1,5 +1,6 @@
 import React from 'react';
 import Drawer from './Drawer';
+import { Link } from 'react-router-dom';
 
 const CartMordal = ({cart}) => {
 
@@ -22,8 +23,8 @@ const CartMordal = ({cart}) => {
             {/* <li><a>Sidebar Item 1</a></li>
             <li><a>Sidebar Item 2</a></li> */}
             {
-                cart.length ===0 ? " " : 
-                <button class="btn btn-outline btn-warning">Proccess to Checkout</button>
+                cart.length === 0 ? " " : 
+                <button class="btn btn-outline btn-warning"><Link to='/checkout'>Proccess to Checkout</Link></button>
             }
             </ul>
             

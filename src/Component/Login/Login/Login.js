@@ -2,6 +2,7 @@ import React from 'react';
 import './Login.css';
 import { Link , useNavigate} from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { useForm } from "react-hook-form";
 import auth from '../../../firebase.init';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
@@ -24,7 +25,8 @@ const Login = () => {
         return <LoadingSpinner></LoadingSpinner>
     }
     if (user || user1) {
-        navigate(from, { replace: true })
+        navigate(from, { replace: true });
+        console.log(user || user1)
       }
 
     let logInError;
@@ -35,7 +37,8 @@ const Login = () => {
 
     const onSubmit = (data) => {
         signInWithEmailAndPassword(data.email, data.password);
-        console.log(data)
+        console.log(data);
+        toast.success('Successfully Login');
     };
 
 

@@ -1,5 +1,6 @@
 
 import './App.css';
+import { ToastContainer } from 'react-toastify';
 import Navbar from './Component/Sharer/Navbar';
 import {Routes, Route} from "react-router-dom";
 import Home from './Component/Home/Home';
@@ -11,6 +12,7 @@ import Dashboard from './Component/Dashboard/Dashboard';
 import UserProfile from './Component/Dashboard/UserProfile';
 import UserProducts from './Component/Dashboard/UserProducts';
 import AllProducts from './Component/Home/AllProducts';
+import CheckOut from './Component/CheckOut/CheckOut';
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
         <Route path='/products' element={<AllProducts></AllProducts>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
+        <Route path='/checkout' element={<RequireAuth><CheckOut></CheckOut></RequireAuth>}></Route>
         <Route path='/dashboard' element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
           <Route path='profile' element={<UserProfile></UserProfile>}></Route>
           <Route path='userProducts' element={<UserProducts></UserProducts>}></Route>
@@ -29,6 +32,7 @@ function App() {
         </Route>
       </Routes>
       <Footer></Footer>
+      <ToastContainer></ToastContainer>
     </div>
   );
 }

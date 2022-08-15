@@ -8,13 +8,22 @@ const Drawer = ({getCart}) => {
     const {name,stock,image,sale_price} = getCart;
     const productImage = `https://idbdev.com/motion2/public/images/${image}`;
     // setPrice(sale_price);
-    const handlePlusBtn = ()=>{
+    useEffect(()=>{
+         let newPrice = sale_price;
+         
+        setPrice(newPrice);
+    },[sale_price]);
+    
+    const handlePlusBtn = (sale_price)=>{
 
+        
+        
         if (value >= 1) {
-            const newValue = value + 1;
-            
-            setValue(newValue);
+            const newPrice = parseInt(price) + parseInt(sale_price);
+            setPrice(newPrice);
+            setValue( value + 1);
         }
+        
         
         
     };
@@ -30,7 +39,7 @@ const Drawer = ({getCart}) => {
     return (
         <div className='justify-center'>
             <div className="cart-price-quantity">
-                <div onClick={handlePlusBtn} className='px-2 mb-4'><FaPlus></FaPlus></div>
+                <div onClick={()=>handlePlusBtn(sale_price)} className='px-2 mb-4'><FaPlus></FaPlus></div>
                 
                 <div>
                     <input className='px-2' type="text" name="quantity" value={value} id="input-box" />
@@ -47,7 +56,11 @@ const Drawer = ({getCart}) => {
             </div>
             <div className="text-area">
                 <h5 className="text-2xl">{name}</h5>
-                <p className='font-bold  text-yellow-600'>$</p>
+                <p className='font-bold  text-yellow-600'>
+                    ${
+                        value < 2 ? sale_price : price
+                    }
+                    </p>
             </div>
             <div className='w-12'>
             <button class="btn btn-circle btn-outline">
