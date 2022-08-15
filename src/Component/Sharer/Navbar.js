@@ -24,6 +24,13 @@ const Navbar = () => {
                 </ul>
             </div>
             <div class="navbar-end">
+            <div>
+                <ul className="manu menu-horizontal px-2">
+                    <li className='px-4'><Link to='/login'>Login</Link></li>
+                    <li>|</li>
+                    <li className='px-4'><Link to='/signup'>SignUp</Link></li>
+                </ul>
+            </div>
             <div for="Cart-drawer" class="text-2xl px-4 ">
             <label for="Cart-drawer" class="cursor-pointer"><GrCart></GrCart></label>
             </div>

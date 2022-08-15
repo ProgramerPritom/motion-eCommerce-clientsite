@@ -4,14 +4,18 @@ import './Drawer.css';
 
 const Drawer = ({getCart}) => {
     const [value,setValue] = useState(1);
+    const [price,setPrice] = useState(0);
     const {name,stock,image,sale_price} = getCart;
     const productImage = `https://idbdev.com/motion2/public/images/${image}`;
-   
+    // setPrice(sale_price);
     const handlePlusBtn = ()=>{
+
         if (value >= 1) {
             const newValue = value + 1;
+            
             setValue(newValue);
         }
+        
         
     };
     const handleMinusBtn = ()=>{
@@ -43,7 +47,12 @@ const Drawer = ({getCart}) => {
             </div>
             <div className="text-area">
                 <h5 className="text-2xl">{name}</h5>
-                <p className='font-bold  text-yellow-600'>${sale_price}</p>
+                <p className='font-bold  text-yellow-600'>$</p>
+            </div>
+            <div className='w-12'>
+            <button class="btn btn-circle btn-outline">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
             </div>
             
             
