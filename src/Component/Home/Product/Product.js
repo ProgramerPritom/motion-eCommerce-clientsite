@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import CartMordal from '../CartMordal/CartMordal';
 import './Product.css';
 
-const Product = ({product}) => {
+const Product = ({product,handleCart}) => {
     const {id,name,regular_price,sale_price,stock,image} = product;
     const productImage = `https://idbdev.com/motion2/public/images/${image}`;
     // const [productImage,setProductImage]= useState('');
@@ -14,7 +15,9 @@ const Product = ({product}) => {
     //     })
     // },[image])
     return (
-        <div class="card w-full border shadow">
+        <div>
+            {/* Product */}
+            <div class="card w-full border shadow">
             <figure><img className='w-full' src={productImage} alt="Shoes" /></figure>
             <div class="product-card-body card-body">
                 <h2 class="card-title text-xl font-bold">{name}</h2>
@@ -27,10 +30,16 @@ const Product = ({product}) => {
                     stock === 0?
                     <button class="btn btn-primary" disabled>Stock out</button>
                     :
-                    <button class="btn btn-primary btn-outline">Add Cart</button>}
+                    <button class="btn btn-primary btn-outline" >
+                        <label for="Cart-drawer" onClick={()=>handleCart(product)} class="">ADD CART</label>
+                        </button>}
                 </div>
             </div>
             </div>
+
+
+
+        </div>
     );
 };
 

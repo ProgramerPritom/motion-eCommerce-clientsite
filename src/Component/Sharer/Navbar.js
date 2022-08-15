@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { GrCart } from "react-icons/gr";
 
 const Navbar = () => {
     return (
@@ -23,7 +24,10 @@ const Navbar = () => {
                 </ul>
             </div>
             <div class="navbar-end">
-                <a class="btn">Get started</a>
+            <div for="Cart-drawer" class="text-2xl px-4 ">
+            <label for="Cart-drawer" class="cursor-pointer"><GrCart></GrCart></label>
+            </div>
+            
             </div>
             </div>
     );

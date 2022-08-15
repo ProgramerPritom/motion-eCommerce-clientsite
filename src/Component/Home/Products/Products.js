@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import CartMordal from '../CartMordal/CartMordal';
 import Product from '../Product/Product';
 
 const Products = () => {
     const [products,setProducts] = useState([]);
+    const [cart,setCart] = useState([]);
     useEffect(()=>{
         fetch('https://idbdev.com/motion2/public/api/product-is-here-caught-me')
         .then(res =>res.json())
@@ -10,7 +12,13 @@ const Products = () => {
             // console.log(data);
             setProducts(data.data);
         })
-    },[])
+    },[]);
+    const handleCart = (product) =>{
+        console.log(product);
+        const newCart = [...cart,product];
+        setCart(newCart);
+        
+    }
     return (
         <div>
             <div className="products-text flex justify-between p-3">
@@ -19,9 +27,14 @@ const Products = () => {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
                 {
-                    products.slice(0,6).map(product=><Product key={product.id} product={product}></Product>)
+                    products.slice(0,6).map(product=><Product key={product.id} product={product} handleCart={handleCart}></Product>)
                 }
             </div>
+            <h4>product cart: {cart.length}</h4>
+            <div className='Mordal-container'>
+                <CartMordal cart={cart}></CartMordal>
+            </div>
+
            
 
         </div>
