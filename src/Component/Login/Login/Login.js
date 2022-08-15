@@ -1,12 +1,16 @@
 import React from 'react';
 import './Login.css';
-import { Link } from 'react-router-dom';
+import { Link , useNavigate} from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import auth from '../../../firebase.init';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import LoadingSpinner from '../../Sharer/LoadingSpinner';
 
 const Login = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const navigate = useNavigate();
+    const location = useLocation();
     const [
         signInWithEmailAndPassword,
         user1,
@@ -14,6 +18,21 @@ const Login = () => {
         error1,
       ] = useSignInWithEmailAndPassword(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
+    let from = location.state?.from?.pathname || "/";
+
+    if (loading || loading1) {
+        return <LoadingSpinner></LoadingSpinner>
+    }
+    if (user || user1) {
+        navigate(from, { replace: true })
+      }
+
+    let logInError;
+      if (error || error1 ||errors) {
+        logInError = <p className='text-red-500 py-4 text-center'>{error?.message || error1?.message || errors?.message}</p>
+      }
+
+
     const onSubmit = (data) => {
         signInWithEmailAndPassword(data.email, data.password);
         console.log(data)
@@ -65,6 +84,7 @@ const Login = () => {
                 <div class="divider">OR</div>
                 <button className='btn btn-accen' onClick={()=>signInWithGoogle()}>Continue with GOOGLE</button>
                 </div>
+                {logInError}
                 </div>
             </div>
             </div>
