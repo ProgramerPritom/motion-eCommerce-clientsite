@@ -9,14 +9,14 @@ const UserProfile = () => {
         return <LoadingSpinner></LoadingSpinner>
     }
     return (
-        <div class="card lg:card-side bg-base-100 shadow-xl">
-        <figure><div class="avatar online">
-            <div class="w-24 rounded-full">
+        <div className="card lg:card-side bg-base-100 shadow-xl">
+        <figure><div className="avatar online">
+            <div className="w-24 rounded-full">
                 <img src={user?.photoURL} />
             </div>
             </div></figure>
-        <div class="card-body">
-            <h2 class="card-title">Name:{user?.displayName}</h2>
+        <div className="card-body">
+            <h2 className="card-title">Name:{user?.displayName}</h2>
             <p>Phone: {user?.phone}</p>
             <p>Email: {user?.email}</p>
             

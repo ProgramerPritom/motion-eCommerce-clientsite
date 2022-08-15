@@ -41,56 +41,56 @@ const SignUp = () => {
 
     return (
         <div>
-            <div class="hero min-h-screen bg-base-200">
-            <div class="hero-content flex-col lg:flex-row-reverse mx-4">
-                <div class="text-center lg:text-left">
-                <h1 class="text-5xl font-bold">SignUp Now</h1>
-                <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <div className="hero min-h-screen bg-base-200">
+            <div className="hero-content flex-col lg:flex-row-reverse mx-4">
+                <div className="text-center lg:text-left">
+                <h1 className="text-5xl font-bold">SignUp Now</h1>
+                <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
                 </div>
-                <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                <div class="card-body">
+                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                <div className="card-body">
                     
                 <form onSubmit={handleSubmit(onSubmit)}>
 
-                <div class="form-control">
-                <label class="label">
-                    <span class="label-text">Name</span>
+                <div className="form-control">
+                <label className="label">
+                    <span className="label-text">Name</span>
                 </label>
 
-                <input type="text" placeholder="Enter Your Name" class="input input-bordered" {...register("name", { required: true })} />
+                <input type="text" placeholder="Enter Your Name" className="input input-bordered" {...register("name", { required: true })} />
                 </div>
 
-                <div class="form-control">
-                <label class="label">
-                    <span class="label-text">Email</span>
+                <div className="form-control">
+                <label className="label">
+                    <span className="label-text">Email</span>
                 </label>
 
-                <input type="text" placeholder="Enter your Email" class="input input-bordered" {...register("email", { required: true })} />
+                <input type="text" placeholder="Enter your Email" className="input input-bordered" {...register("email", { required: true })} />
                 </div>
-                <div class="form-control">
-                <label class="label">
-                    <span class="label-text">Phone</span>
+                <div className="form-control">
+                <label className="label">
+                    <span className="label-text">Phone</span>
                 </label>
 
-                <input type="text" placeholder="Enter your Phone" class="input input-bordered" {...register("phone", { required: true })} />
+                <input type="text" placeholder="Enter your Phone" className="input input-bordered" {...register("phone", { required: true })} />
                 </div>
 
-                <div class="form-control">
-                <label class="label">
-                    <span class="label-text">Password</span>
+                <div className="form-control">
+                <label className="label">
+                    <span className="label-text">Password</span>
                 </label>
-                <input type="password" placeholder="Type Password" class="input input-bordered" {...register("password", { required: true })} />
-                <label class="label">
-                    <Link to='' class="label-text-alt link link-hover">Forgot password?</Link>
+                <input type="password" placeholder="Type Password" className="input input-bordered" {...register("password", { required: true })} />
+                <label className="label">
+                    <Link to='' className="label-text-alt link link-hover">Forgot password?</Link>
                 </label>
                 <p>New on Motion view? <span className='text-yellow-700 font-semibold underline cursor-pointer'><Link to='/signup'>Create an account</Link></span></p>
                 </div>
-                <div class="form-control mt-6">
+                <div className="form-control mt-6">
                 <input className='btn btn-primary' type="submit" />
                 </div>
                 </form>
 
-                <div class="divider">OR</div>
+                <div className="divider">OR</div>
                 <button className='btn btn-accen' onClick={()=>signInWithGoogle()}>Continue with GOOGLE</button>
                 {
                     signInError

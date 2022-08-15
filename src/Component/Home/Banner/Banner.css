@@ -6,11 +6,60 @@
     height: 100px !important;
 } */
 .banner-1{
-    background-image: url('https://i.ibb.co/5MNytyp/2-2-620x257.webp');
+    background-image: url('https://i.ibb.co/4Kd6t5t/h1-hero1-jpg.webphttps://i.ibb.co/y88SX5K/dm3-bnr1-2000x.webphttps://i.ibb.co/gZRspYY/dm3-bnr2-2000x.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .banner-2{
-    background-image: url('https://i.ibb.co/vZw6dK7/slider-1.webp');
+    background-image: url('https://i.ibb.co/y88SX5K/dm3-bnr1-2000x.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .banner-3{
-    background-image: url('https://i.ibb.co/DLmJsM1/slider-2.webp');
+    background-image: url('https://i.ibb.co/gZRspYY/dm3-bnr2-2000x.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
+#banner1-text{
+    color: rgb(245, 160, 32);
+}
+#banner2-text{
+    color: rgb(97, 68, 24);
+}
+#banner-btn{
+    background-color: transparent;
+    color: rgb(245, 160, 32);
+    border: 1px solid rgb(173, 114, 25);
+    border-radius: 25px;
+    font-size: 26px;
+    font-weight: 600;
+}
+#banner-btn:hover{
+    background-color: rgb(235, 153, 31);
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

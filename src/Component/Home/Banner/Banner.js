@@ -18,13 +18,13 @@ const Banner = () => {
         
         <Slider {...settings}>
           <div>
-          <div class="banner-1 hero min-h-screen">
-            <div class="hero-content flex-col lg:flex-row-reverse">
+          <div className="banner-1 hero min-h-screen">
+            <div className="hero-content flex-col lg:flex-row-reverse">
                 
                 <div>
-                <h1 class="text-5xl font-bold text-white">Box Office News!</h1>
-                <p class="py-6 text-white">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                <button class="btn btn-primary">Get Started</button>
+                <h1 id='banner1-text' className="text-5xl font-bold text-white">Exclusive Offer</h1>
+                <p id='banner2-text' className="py-6 text-white">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                <button id='banner-btn' className="btn btn-primary">Shop Now</button>
                 </div>
             </div>
             </div>
@@ -33,13 +33,13 @@ const Banner = () => {
 
 
           <div>
-          <div class="banner-2 hero min-h-screen">
-            <div class="hero-content flex-col lg:flex-row-reverse">
+          <div className="banner-2 hero min-h-screen">
+            <div className="hero-content flex-col lg:flex-row-reverse">
                 
                 <div>
-                <h1 class="text-5xl font-bold text-white">Box Office News!</h1>
-                <p class="py-6 text-white">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                <button class="btn btn-primary">Get Started</button>
+                <h1 id='banner1-text' className="text-5xl font-bold text-white">Visit Out Latest Collection</h1>
+                <p id='banner2-text' className="py-6 text-white">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                <button id='banner-btn' className="btn btn-primary">Shop Now</button>
                 </div>
             </div>
             </div>
@@ -48,12 +48,12 @@ const Banner = () => {
 
 
           <div>
-          <div class="banner-3 hero min-h-screen">
-            <div class="hero-content flex-col lg:flex-row-reverse">
+          <div className="banner-3 hero min-h-screen">
+            <div className="hero-content flex-col lg:flex-row-reverse">
                 <div>
-                <h1 class="text-5xl font-bold text-white">Box Office News!</h1>
-                <p class="py-6 text-white">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                <button class="btn btn-primary">Get Started</button>
+                <h1 id='banner1-text' className="text-5xl font-bold text-white">Find you Happiness</h1>
+                <p id='banner2-text' className="py-6 text-white">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                <button id='banner-btn' className="btn btn-primary">Shop Now</button>
                 </div>
             </div>
             </div>

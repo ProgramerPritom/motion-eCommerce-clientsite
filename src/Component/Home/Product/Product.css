@@ -13,3 +13,16 @@
 .product-card-body{
     padding: 15px !important;
 }
+#banner22-btn{
+    background-color: transparent;
+    color: rgb(245, 160, 32);
+    border: 1px solid rgb(173, 114, 25);
+    border-radius: 20px;
+    font-size: 22px;
+    font-weight: 400;
+    transition: 0.3s;
+}
+#banner22-btn:hover{
+    background-color: rgb(235, 153, 31);
+    color: white;
+}

@@ -17,3 +17,8 @@
     color: black;
     transition: all .3s;
 }
+@media only screen and (max-width: 480px) {
+    #footer-search{
+        display: none;
+    }
+}

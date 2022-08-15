@@ -17,21 +17,21 @@ const Product = ({product,handleCart}) => {
     return (
         <div>
             {/* Product */}
-            <div class="card w-full border shadow">
+            <div className="card w-full border shadow">
             <figure><img className='w-full' src={productImage} alt="Shoes" /></figure>
-            <div class="product-card-body card-body">
-                <h2 class="card-title text-xl font-bold">{name}</h2>
+            <div className="product-card-body card-body">
+                <h2 className="card-title text-xl font-bold">{name}</h2>
                 <p>${sale_price} <span className='regular-price-text text-sm text-slate-400 m-4'>${regular_price}</span></p>
                 {
                     stock === 0?
                     <p>Out of Stock</p>:<p>In Stock : <span className='font-bold'>{stock}</span> pics</p>}
-                <div class="card-actions">
+                <div className="card-actions">
                 {
                     stock === 0?
-                    <button class="btn btn-primary" disabled>Stock out</button>
+                    <button className="btn btn-primary" disabled>Stock out</button>
                     :
-                    <button class="btn btn-primary btn-outline" >
-                        <label for="Cart-drawer" onClick={()=>handleCart(product)} class="">ADD CART</label>
+                    <button id='banner22-btn' className="btn btn-primary btn-outline" >
+                        <label for="Cart-drawer" onClick={()=>handleCart(product)} className="">ADD CART</label>
                         </button>}
                 </div>
             </div>

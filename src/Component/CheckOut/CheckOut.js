@@ -12,14 +12,14 @@ const CheckOut = () => {
         console.log(data);
     };
     return (
-        <div class="hero min-h-screen bg-base-200">
-            <div class="hero-content flex-col lg:flex-row-reverse">
-                <div class="text-center lg:text-left">
+        <div className="hero min-h-screen bg-base-200">
+            <div className="hero-content flex-col lg:flex-row-reverse">
+                <div className="text-center lg:text-left">
                 <div>
                     <h2 className="text-center font-semibold text-2xl">
                         Select Your Payment Method
                     </h2>
-                    <select class="select w-full max-w-xs">
+                    <select className="select w-full max-w-xs">
                     <option disabled selected>Select your Payment</option>
                     <option>Cash On Delivery</option>
                     <option>Bkash</option>
@@ -28,30 +28,30 @@ const CheckOut = () => {
                     </select>
                 </div>
                 </div>
-                <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                <div class="card-body">
+                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                <div className="card-body">
                 <h2 className="text-3xl text-center my-3 font-bold">Information</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <div class="form-control">
-                    <label class="label">
-                    <span class="label-text">Full Name</span>
+                    <div className="form-control">
+                    <label className="label">
+                    <span className="label-text">Full Name</span>
                     </label>
-                    <input type="text" placeholder="Enter Name" class="input input-bordered" {...register("name", { required: true })}/>
+                    <input type="text" placeholder="Enter Name" className="input input-bordered" {...register("name", { required: true })}/>
                     </div>
-                    <div class="form-control">
-                    <label class="label">
-                    <span class="label-text">Phone</span>
+                    <div className="form-control">
+                    <label className="label">
+                    <span className="label-text">Phone</span>
                     </label>
-                    <input type="text" placeholder="Enter Phone" class="input input-bordered" {...register("phone", { required: true })}/>
+                    <input type="text" placeholder="Enter Phone" className="input input-bordered" {...register("phone", { required: true })}/>
                     </div>
-                    <div class="form-control">
-                    <label class="label">
-                    <span class="label-text">Address</span>
+                    <div className="form-control">
+                    <label className="label">
+                    <span className="label-text">Address</span>
                     </label>
-                    <input type="text" placeholder="House / Road" class="input input-bordered" {...register("address", { required: true })}/>
+                    <input type="text" placeholder="House / Road" className="input input-bordered" {...register("address", { required: true })}/>
                     </div>
-                    <div class="form-control">
-                    <select class="select w-full max-w-xs">
+                    <div className="form-control">
+                    <select className="select w-full max-w-xs">
                     <option disabled selected>Pick your Divition</option>
                     <option>Dhaka</option>
                     <option>Rangpur</option>
@@ -60,9 +60,9 @@ const CheckOut = () => {
                     <option>Sylhet</option>
                     </select>
                     </div>
-                    <div class="form-control mt-6">
+                    <div className="form-control mt-6">
                         
-                    <button class="btn btn-primary">Confirm Order</button>
+                    <button className="btn btn-primary">Confirm Order</button>
                     </div>
                     </form>
                 </div>
